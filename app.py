@@ -3,7 +3,7 @@ import plotly.graph_objects as go
 
 survey_config = {
     "Category 1": {
-        "description": "Digital Strategy & Invesments",
+        "description": "Digital Business Strategy",
         "questions": [
             {"name": "Q1ai", "label": "Question 1: Already Invested (count)", "type": "number", "default": 5},
             {"name": "Q1pi", "label": "Question 1: Plan to Invest (count)", "type": "number", "default": 4},
@@ -24,14 +24,14 @@ survey_config = {
         ]
     },
     "Category 3": {
-        "description": "Human Centric & Security",
+        "description": "Human-centric Digitilisation",
         "questions": [
             {"name": "Q5_cat3", "label": "Question 5: Re-skilling and up-skilling of staff for digitalisation", "type": "number", "default": 2},
             {"name": "Q6_cat3", "label": "Question 6:  Adoption of new digital solutions", "type": "number", "default": 7}
         ]
     },
     "Category 4": {
-        "description": "Data Management",
+        "description": "Data Management & Security",
         "questions": [
             {"name": "Q5_cat4", "label": "Question 7: How is data managed?", "type": "number", "default": 5},
             {"name": "Q6_cat4", "label": "Question 8: Is data secured?", "type": "number", "default": 5}
@@ -52,7 +52,7 @@ def calc_category2(data):
     """
     adv_keys = ["Simulation", "VR_AR", "CAD_CAM", "MES", "IoT", "Blockchain", "Additive"]
     adv_sum = sum(data[k] for k in adv_keys)
-    return (data["Q3"] * 5) + (adv_sum * 0.2 * 5)
+    return (data["Q3"] * 5) + ((adv_sum * 0.2) * (10/7) * 5)
 
 def calc_category3(data):
     """
@@ -170,7 +170,7 @@ with col1:
     st.metric("Category 2: Digital Readiness Score", f"{cat2_disp} %")
 with col2:
     st.metric("Category 3: Human-centric Digitilisation Score", f"{cat3_disp} %")
-    st.metric("Category 4: Data Management Score", f"{cat4_disp} %")
+    st.metric("Category 4: Data Management & Security Score", f"{cat4_disp} %")
 st.markdown(f"### Overall Digital Maturity: **{overall_disp} %**")
 
 st.header("Maturity Gauges")
@@ -185,7 +185,7 @@ with cat_cols[0]:
     st.plotly_chart(create_gauge_chart(cat3_disp, "Category 3: Human-centric Digitilisation"), use_container_width=True)
 with cat_cols[1]:
     st.plotly_chart(create_gauge_chart(cat2_disp, "Category 2: Digital Readiness"), use_container_width=True)
-    st.plotly_chart(create_gauge_chart(cat4_disp, "Category 4: Data Management"), use_container_width=True)
+    st.plotly_chart(create_gauge_chart(cat4_disp, "Category 4: Data Management & Security"), use_container_width=True)
 
 
 # with st.expander("Show Raw Data & Calculations"):
