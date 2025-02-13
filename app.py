@@ -5,36 +5,36 @@ survey_config = {
     "Category 1": {
         "description": "Digital Business Strategy",
         "questions": [
-            {"name": "Q1ai", "label": "Question 1: Already Invested (count)", "type": "number", "default": 5},
-            {"name": "Q1pi", "label": "Question 1: Plan to Invest (count)", "type": "number", "default": 4},
-            {"name": "Q2_cat1", "label": "Question 2: Preparedness Score (0-10)", "type": "number", "default": 8}
+            {"name": "Q1ai", "label": "Question 1: Already Invested (count)", "type": "number", "default": 0},
+            {"name": "Q1pi", "label": "Question 1: Plan to Invest (count)", "type": "number", "default": 0},
+            {"name": "Q2_cat1", "label": "Question 2: Preparedness Score (0-10)", "type": "number", "default": 0}
         ]
     },
     "Category 2": {
         "description": "Digital Readiness",
         "questions": [
-            {"name": "Q3", "label": "Question 3: Count of Digital Technologies Already Being Used", "type": "number", "default": 8},
+            {"name": "Q3", "label": "Question 3: Count of Digital Technologies Already Being Used", "type": "number", "default": 0},
             {"name": "Simulation", "label": "Question 4: Simulation & Digital Twins", "type": "slider", "min": 0, "max": 5, "default": 0},
             {"name": "VR_AR", "label": "Question 4: Virtual/Augmented Reality", "type": "slider", "min": 0, "max": 5, "default": 0},
-            {"name": "CAD_CAM", "label": "Question 4: Computer Aided Design & Manufacturing", "type": "slider", "min": 0, "max": 5, "default": 1},
-            {"name": "MES", "label": "Question 4: Manufacturing Execution Systems", "type": "slider", "min": 0, "max": 5, "default": 2},
-            {"name": "IoT", "label": "Question 4: Internet of Things (IoT) and Industrial Internet of Things (I-IoT)", "type": "slider", "min": 0, "max": 5, "default": 3},
-            {"name": "Blockchain", "label": "Question 4: Blockchain Technology", "type": "slider", "min": 0, "max": 5, "default": 4},
-            {"name": "Additive", "label": "Question 4: Additive Manufacturing", "type": "slider", "min": 0, "max": 5, "default": 5}
+            {"name": "CAD_CAM", "label": "Question 4: Computer Aided Design & Manufacturing", "type": "slider", "min": 0, "max": 5, "default": 0},
+            {"name": "MES", "label": "Question 4: Manufacturing Execution Systems", "type": "slider", "min": 0, "max": 5, "default": 0},
+            {"name": "IoT", "label": "Question 4: Internet of Things (IoT) and Industrial Internet of Things (I-IoT)", "type": "slider", "min": 0, "max": 5, "default": 0},
+            {"name": "Blockchain", "label": "Question 4: Blockchain Technology", "type": "slider", "min": 0, "max": 5, "default": 0},
+            {"name": "Additive", "label": "Question 4: Additive Manufacturing", "type": "slider", "min": 0, "max": 5, "default": 0}
         ]
     },
     "Category 3": {
         "description": "Human-centric Digitilisation",
         "questions": [
-            {"name": "Q5_cat3", "label": "Question 5: Re-skilling and up-skilling of staff for digitalisation", "type": "number", "default": 2},
-            {"name": "Q6_cat3", "label": "Question 6:  Adoption of new digital solutions", "type": "number", "default": 7}
+            {"name": "Q5_cat3", "label": "Question 5: Re-skilling and up-skilling of staff for digitalisation", "type": "number", "default": 0},
+            {"name": "Q6_cat3", "label": "Question 6:  Adoption of new digital solutions", "type": "number", "default": 0}
         ]
     },
     "Category 4": {
         "description": "Data Management & Security",
         "questions": [
-            {"name": "Q5_cat4", "label": "Question 7: How is data managed?", "type": "number", "default": 5},
-            {"name": "Q6_cat4", "label": "Question 8: Is data secured?", "type": "number", "default": 5}
+            {"name": "Q5_cat4", "label": "Question 7: How is data managed?", "type": "number", "default": 0},
+            {"name": "Q6_cat4", "label": "Question 8: Is data secured?", "type": "number", "default": 0}
         ]
     }
 }
